@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="post" type="enlightment.yash.sociopy.viewmodels.PostModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fillViewport="true"
+        tools:context=".activities.PostActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/postLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <ImageButton
+                android:id="@+id/cancelPostButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/cross_orange_50"
+                android:contentDescription="@string/todo"
+                android:onClick="cancelPost"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/createPostButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="post"
+                android:shadowColor="@color/white"
+                android:text="@string/post"
+                android:textColor="@color/white"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/writeSomethingImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/feather_orange"
+                android:contentDescription="@string/todo"
+                app:layout_constraintLeft_toRightOf="@id/cancelPostButton"
+                app:layout_constraintTop_toBottomOf="@id/cancelPostButton" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/postTextTextInputLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="20dp"
+                android:background="@android:color/transparent"
+                android:gravity="start"
+                app:boxBackgroundColor="@android:color/transparent"
+                app:counterEnabled="true"
+                app:counterMaxLength="200"
+                app:counterTextColor="@color/secondary_c"
+                app:layout_constraintLeft_toRightOf="@id/writeSomethingImageView"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/writeSomethingImageView">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/postTextTextInputEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="20dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="start"
+                    android:hint="@string/what_s_happening"
+                    android:inputType="text|textNoSuggestions|textMultiLine"
+                    android:maxLength="200"
+                    android:textColor="@color/black"
+                    android:textStyle="italic" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/postPicture"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/icon_image_colored"
+                android:contentDescription="@string/todo"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/postTextTextInputLayout" />
+
+            <ImageButton
+                android:id="@+id/cancelImage"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/cancel_orange"
+                android:visibility="gone"
+                app:layout_constraintCircle="@id/postPicture"
+                app:layout_constraintCircleAngle="55"
+                app:layout_constraintCircleRadius="60dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</layout>

@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Sociopy</string>
+    <string name="hello_java">Hello Java</string>
+    <string name="main_heading">I love Java and C</string>
+    <string name="login_main_heading">Login</string>
+    <string name="login_secondary_heading">Please sign in to continue</string>
+    <string name="email_hint">EMAIL</string>
+    <string name="password_hint">PASSWORD</string>
+    <string name="no_account_label">Don\'t have an account?</string>
+    <string name="no_id_sign_up">Sign Up</string>
+    <string name="create_account_heading">Create Account</string>
+    <string name="todo">TODO</string>
+    <string name="full_name_sign_up">FULL NAME</string>
+    <string name="confirm_password_hint">CONFIRM PASSWORD</string>
+    <string name="already_account_label">Already have a account</string>
+    <string name="already_id_sign_in">Sign In\n</string>
+    <string name="home_menu_option">Home</string>
+    <string name="friends_option">Friends</string>
+    <string name="profile_option">Profile</string>
+    <string name="post">POST</string>
+    <string name="what_s_happening">what\'s happening?</string>
+    <string name="choose_option">Choose to post a photo</string>
+    <string name="click_a_photo">Click a photo</string>
+    <string name="pick_a_photo">Pick a photo</string>
+</resources>
